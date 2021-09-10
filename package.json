@@ -5,6 +5,7 @@
   "author": "SoftwareSing",
   "license": "AGPL-3.0-or-later",
   "scripts": {
+    "lint": "eslint .",
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "start": "sirv public --no-clear"
