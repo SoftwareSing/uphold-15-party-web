@@ -8,7 +8,7 @@
     "lint": "eslint .",
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public --no-clear"
+    "start": "sirv public --single --no-clear --host 0.0.0.0 --port 5015"
   },
   "dependencies": {
     "sirv-cli": "^1.0.0",

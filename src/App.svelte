@@ -1,30 +1,32 @@
 <script>
-  export let name
+  import { Router, Route, navigate } from 'svelte-routing'
+  import AppTop from './AppTop.svelte'
+  import HomePage from './HomePage.svelte'
+  import ScApplyPage from './ScApplyPage.svelte'
+  import ScTrackPage from './ScTrackPage.svelte'
+
+  export let url = ''
+  window.__navigator = navigate
 </script>
 
-<main>
-  <h1>Hello {name}!</h1>
-  <p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
+<Router url="{url}">
+  <div class="app-top fixed-top">
+    <AppTop />
+  </div>
+  <div class="app">
+    <Route path="/sc/apply" component="{ScApplyPage}" />
+    <Route path="/sc/track" component="{ScTrackPage}" />
+    <Route path="/" component="{HomePage}" />
+  </div>
+</Router>
 
 <style>
-  main {
-    text-align: center;
-    padding: 1em;
-    max-width: 240px;
-    margin: 0 auto;
+  .app-top {
+    height: 60px !important;
   }
 
-  h1 {
-    color: #ff3e00;
-    text-transform: uppercase;
-    font-size: 4em;
-    font-weight: 100;
-  }
-
-  @media (min-width: 640px) {
-    main {
-      max-width: none;
-    }
+  .app {
+    margin-top: 60px;
+    position: relative;
   }
 </style>
