@@ -3,7 +3,9 @@
   import AppTop from './AppTop.svelte'
   import HomePage from './HomePage.svelte'
   import ScApplyPage from './ScApplyPage.svelte'
+  import ScTrackOrderPage from './ScTrackOrderPage.svelte'
   import ScTrackPage from './ScTrackPage.svelte'
+  import Modal from './Modal.svelte'
 
   export let url = ''
   window.__navigator = navigate
@@ -15,9 +17,11 @@
   </div>
   <div class="app">
     <Route path="/sc/apply" component="{ScApplyPage}" />
+    <Route path="/sc/track/:orderId" component="{ScTrackOrderPage}" />
     <Route path="/sc/track" component="{ScTrackPage}" />
     <Route path="/" component="{HomePage}" />
   </div>
+  <Modal />
 </Router>
 
 <style>
