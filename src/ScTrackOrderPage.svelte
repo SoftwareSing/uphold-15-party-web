@@ -6,6 +6,13 @@
 
   export let orderId
 
+  const statusMap = new Map([
+    ['applied', '已收到申請，等待執行人員確認'],
+    ['processing', '處理中'],
+    ['finish', '已完成'],
+    ['reject', '拒絕申請']
+  ])
+
   let order = {
     scOrderId: orderId,
     orderStatus: '',
@@ -48,6 +55,10 @@
         <th class="fw-normal">{order.scOrderId}</th>
       </tr>
       <tr>
+        <th class="fw-normal">訂單狀態</th>
+        <th class="fw-normal">{statusMap.get(order.orderStatus)}</th>
+      </tr>
+      <tr>
         <th class="fw-normal">申請時間</th>
         <th class="fw-normal">{formatTime(order.createdAt)}</th>
       </tr>
@@ -59,6 +70,16 @@
         <th class="fw-normal">備註</th>
         <th class="fw-normal">{order.scNote}</th>
       </tr>
+      {#if order.imgUrl}
+        <tr>
+          <th class="fw-normal">SC截圖</th>
+          <th class="fw-normal">
+            <a href="{order.imgUrl}" target="_blank">
+              <img class="mw-100" src="{order.imgUrl}" alt="sc img" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            </a>
+          </th>
+        </tr>
+      {/if}
     </tbody>
   </table>
 
@@ -76,7 +97,7 @@
           <td class="w-25">
             {#if log.imgUrl}
               <a href="{log.imgUrl}" target="_blank">
-                <img class="w-100" src="{log.imgUrl}" alt="log img" />
+                <img class="w-100" src="{log.imgUrl}" alt="log img" crossorigin="anonymous" referrerpolicy="no-referrer" />
               </a>
             {/if}
           </td>
