@@ -35,7 +35,7 @@
       if (err instanceof HttpError) {
         await showModal({ title: `申請失敗 (${err.code})`, message: `${err.message}` })
       } else {
-        await showModal({ title: '申請失敗', message: '無法解釋的錯誤，請聯繫稍後再試' })
+        await showModal({ title: '申請失敗', message: '無法解釋的錯誤，請稍後再試' })
       }
     } finally {
       loadingOrder = false
