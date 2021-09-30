@@ -50,6 +50,11 @@
     <h3>免費SC申請</h3>
     <div>所有堅定15黨SC卡貴賓，皆可使用本服務申請代投SC，本黨會盡力將您對15的愛慕送達</div>
     <div>但考量本黨資金有限，並非所有申請都會受理，敬請見諒</div>
+    <div>
+      投遞時將以
+      <a href="https://www.google.com/search?q=40+INR+to+TWD" target="_blank">40 INR</a>
+      或任何可能的貨幣SC，以投遞當下本黨可以使用的為準
+    </div>
   </div>
 
   <div class="mt-5">
