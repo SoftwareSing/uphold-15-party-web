@@ -5,6 +5,7 @@
   import ScApplyPage from './ScApplyPage.svelte'
   import ScTrackOrderPage from './ScTrackOrderPage.svelte'
   import ScTrackPage from './ScTrackPage.svelte'
+  import YouDonateIDonatePage from './YouDonateIDonatePage.svelte'
   import Modal from './Modal.svelte'
 
   export let url = ''
@@ -19,6 +20,7 @@
     <Route path="/sc/apply" component="{ScApplyPage}" />
     <Route path="/sc/track/:orderId" component="{ScTrackOrderPage}" />
     <Route path="/sc/track" component="{ScTrackPage}" />
+    <Route path="/you-donate-i-donate" component="{YouDonateIDonatePage}" />
     <Route path="/" component="{HomePage}" />
   </div>
   <Modal />

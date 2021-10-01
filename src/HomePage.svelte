@@ -22,6 +22,15 @@
         </button>
       </Link>
     </div>
+
+    <div class="service-btn">
+      <Link to="/you-donate-i-donate" style="text-decoration: none;">
+        <button type="button" class="btn btn-outline-dark fs-1">
+          <i class="bi bi-truck"></i> SC 1+1 <br />
+          (即將開放)
+        </button>
+      </Link>
+    </div>
   </div>
 </div>
 
