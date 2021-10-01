@@ -24,15 +24,11 @@
     <meta property="og:image" content="{image}" />
     <meta property="og:image:url" content="{image}" />
     <meta property="twitter:image" content="{image}" />
-
-    <link rel="icon" href="{image}" />
   {:else}
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="og:image" content="https://uphold-15-party.com/img/uphold-15-party-for-fb-logo.png" />
     <meta property="og:image:url" content="https://uphold-15-party.com/img/uphold-15-party-for-fb-logo.png" />
     <meta property="twitter:image" content="https://uphold-15-party.com/img/uphold-15-party-for-fb-logo.png" />
-
-    <link rel="icon" type="image/png" href="/favicon.png" />
   {/if}
 </svelte:head>
 
